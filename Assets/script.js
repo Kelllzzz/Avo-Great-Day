@@ -9,7 +9,6 @@
 var EdamanAPI_ID = "181983d3";
 var EdamanAPI_Key = "f419ea241fd50c7fbf94fe990f801e76";
 
-
  // Food input example
 var food_input = "100g of sweetcorn and 50g of biscuit and 20g of rice";
 
