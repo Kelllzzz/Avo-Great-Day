@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="./Assets/style.css">
     <title>Avo Great Day! | Track Your Health Goals</title>
 </head>
@@ -12,9 +13,141 @@
 <body>
     <!--Title jumbotron-->
     <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
-        <div class="col-md-6 p-lg-5 mx-auto my-5">
+        <div class="col-md-8 p-lg-8 mx-auto my-5">
+            <img class="img-thumbnail" id="AGDLogo" src="./Assets/AvoGD-logo.jpg" alt="Avo-Great-Day Logo">
             <h1 class="display-3 fw-bold">Avo Great Day!</h1>
             <h4 class="fw-normal text-muted mb-3">Track your health goals today.</h3>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <!-- Button trigger for the modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#reg-modal1">
+                    Get Started!
+                </button>
+
+                <!-- Modal page 1 -->
+                <div class="modal fade" id="reg-modal1" tabindex="-1" role="dialog" aria-labelledby="register" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Get Started!</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body" id="modal-page-1">
+                                <p>Input your name</p>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text" id="basic-addon1">Name</span>
+                                    </div>
+                                    <input type="text" id="username" class="form-control" placeholder="Your name" aria-label="Username" aria-describedby="basic-addon1">
+                                  </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <div>1 of 4</div>
+                                <button type="button" id="save-name" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#reg-modal2">Set your Goals!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal page 2 -->
+                <div class="modal fade" id="reg-modal2" tabindex="-1" role="dialog" aria-labelledby="register" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Sleep <span><i class="fa-solid fa-face-sleeping fa-beat"></i></span></h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>How much sleep would you like to have daily?</p>
+                                <div class="input-group">
+                                    <input type="number" id="sleep-goal-hour" aria-label="sleep-hour-goal" class="form-control" placeholder="Input hours">
+                                    <span class="input-group-text">hours</span>
+                                    <input type="number" id="sleep-goal-minute" aria-label="sleep-minute-goal" class="form-control" placeholder="Input minutes">
+                                    <span class="input-group-text">minutes</span>
+                                </div>
+                                  
+                            </div>
+                            <div><a href="https://thesleepcharity.org.uk/information-support/adults/sleep-calculator/" target="_blank">Sleep Calculator</a></div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#reg-modal1">Previous</button>
+                                <div>2 of 4</div>
+                                <button type="button" id="save-sleep" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#reg-modal3">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal page 3 -->
+                <div class="modal fade" id="reg-modal3" tabindex="-1" role="dialog" aria-labelledby="register" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Nutrition <span><i class="fa-solid fa-pot-food fa-flip"></i></span></h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>What is your recommended daily calory intake?</p>
+                                <div class="input-group mb-3">
+                                    <input type="number" id="calories-goal" class="form-control" placeholder="Calories intake" aria-label="Calories-goal" aria-describedby="calories-goal">
+                                    <div class="input-group-append">
+                                      <span class="input-group-text" id="calories-goal">Calories</span>
+                                    </div>
+                                  </div>
+                                  
+                            </div>
+                            <div>
+                                <a href="https://www.calculator.net/calorie-calculator.html" target="_blank">Calorie Calculator</a>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#reg-modal2">Previous</button>
+                                <div>3 of 4</div>
+                                <button type="button" id="save-calories" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#reg-modal4">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal page 4 -->
+                <div class="modal fade" id="reg-modal4" tabindex="-1" role="dialog" aria-labelledby="register" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Steps <span><i class="fa-solid fa-shoe-prints fa-bounce"></i></span></h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>How many daily steps do you wish to take?</p>
+                                <div class="input-group mb-3">
+                                    <input type="number" id="steps-goal" class="form-control" placeholder="Daily steps" aria-label="steps-goal" aria-describedby="steps-goal">
+                                    <div class="input-group-append">
+                                      <span class="input-group-text" id="steps-goal">steps</span>
+                                    </div>
+                                  </div>
+                                  
+                            </div>
+                            <div>
+                                <a href="https://www.hollandandbarrett.com/the-health-hub/weight-management/fitness/exercise/your-recommended-daily-steps-by-age/" target="_blank">Step Calculator</a>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#reg-modal3">Previous</button>
+                                <div>4 of 4</div>
+                                <button type="button" id="save-steps" class="btn btn-primary" data-dismiss="modal">End</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
     
@@ -33,9 +166,16 @@
     </div>
 
     <p><a href="journal.html">Records</a></p>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Day.js -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <!-- Bootstraps -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- jQuery and UI-->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <!-- Vanilla JavaScript-->
     <script src="./Assets/script.js"></script>
 </body>
 
