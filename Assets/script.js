@@ -20,15 +20,23 @@ fetch(EdQueryUrl)
     .then(function(response) {
         return response.json();
     })
-    .then(function(data) {
+    .then(function(data1) {
         //Capture calory count
-        console.log(data);
-        var total_calories = data.calories;
+        console.log(data1);
+        var total_calories = data1.calories;
         console.log("Total calorie: " + total_calories + " cal");
     });
 
 //Daily Motivational Quote API fetch
-const QuoteUrl = 'https://quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com/quote?token=ipworld.info';
+var QuoteUrl = 'https://quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com/quote?token=ipworld.info';
+
+//Giphy API fetch based on a translate endpoint
+//Converting the quote of the day into the most fitting gif
+var GiphyAPI_Key = "JlYM2XmAwmrUDSWWhLTzqgSsAOwV5YZ7"
+var GiphyUrl = "api.giphy.com/v1/gifs/translate"
+
+//Global scope variable
+var QuoteText = "";
 
 fetch(QuoteUrl, {
   method: 'GET',
@@ -40,11 +48,37 @@ fetch(QuoteUrl, {
     .then(function(response) {
         return response.json();
     })
-    .then(function(data) {
+    .then(function(data2) {
         //Return Quote
-        console.log(data);
-        var QuoteText = data.text;
-        var QuoteAuthor = data.author;
+        console.log(data2);
+        QuoteText = data2.text;
+        var QuoteAuthor = data2.author;
         console.log("Quote: " + QuoteText);
         console.log("Author: " + QuoteAuthor);
+
+        //Fetch from Giphy the best gif based on today's quote using endPoint and API 
+        var GiphyQueryUrl = "https://api.giphy.com/v1/gifs/translate?&api_key=JlYM2XmAwmrUDSWWhLTzqgSsAOwV5YZ7&s=God always takes the simplest way.";
+        var GiphyQueryUrl = "https://api.giphy.com/v1/gifs/translate?&api_key=JlYM2XmAwmrUDSWWhLTzqgSsAOwV5YZ7&s=" + QuoteText;
+        fetch(GiphyQueryUrl)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data3) {
+                console.log(data3);
+                var GifUrl = data3.data.images.original.url;
+                console.log(GifUrl);
+            })
     });
+
+// Next for the homepage, make calendar
+// id of container is "calendar-box"
+//jQuery UI for datepicker and dynamically insert calendar in index.html
+$(function() {
+    $("#calendar-box").datepicker();
+  } );
+
+
+
+//JavaScript for Journal
+var todaysDate = dayjs().format("dddd, DD MMMM YYYY");
+$("#todays-date").text(todaysDate);
