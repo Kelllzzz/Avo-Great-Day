@@ -1,1 +1,8 @@
+.modal-footer {
+    justify-content:space-between !important;
+}
 
+#AGDLogo {
+    width: 100%;
+    height: auto;
+}
