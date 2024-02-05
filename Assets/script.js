@@ -1,9 +1,4 @@
-//Pseudocode
-// APIs required
-    // Fetch nutritional value of food that was had in the day.
-    // Fetch daily random quote
-    // Fetch random funny gif
-
+//API fetches:
 // Edamam API fetch:
 //Edamam API keys
 var EdamanAPI_ID = "181983d3";
@@ -87,6 +82,8 @@ $(function() {
 $('#save-name').on("click", function(event) {
     event.preventDefault();
     userName = $('#username').val();
+    //Store in local storage
+    localStorage.setItem('Username',JSON.stringify(userName));
     console.log("Username: " + userName);
 });
 
@@ -94,6 +91,8 @@ $('#save-name').on("click", function(event) {
 $('#save-sleep').on("click", function(event) {
     event.preventDefault();
     sleepGoal = parseInt(($('#sleep-goal-hour').val()*60), 10) + parseInt($('#sleep-goal-minute').val(), 10);
+    //Store in local storage
+    localStorage.setItem('sleepGoal',JSON.stringify(sleepGoal));
     console.log("Sleep Goal: " + sleepGoal + " minutes");
 });
 
@@ -101,6 +100,8 @@ $('#save-sleep').on("click", function(event) {
 $('#save-calories').on("click", function(event) {
     event.preventDefault();
     caloriesGoal = parseInt($('#calories-goal').val(), 10);
+    //Store in local storage
+    localStorage.setItem('caloriesGoal',JSON.stringify(caloriesGoal));
     console.log("Calories Goal: " + caloriesGoal + " calories");
 });
 
@@ -108,6 +109,8 @@ $('#save-calories').on("click", function(event) {
 $('#save-steps').on("click", function(event) {
     event.preventDefault();
     stepsGoal = parseInt($('#steps-goal').val(), 10);
+    //Store in local storage
+    localStorage.setItem('stepsGoal',JSON.stringify(stepsGoal));
     console.log("Steps Goal: " + stepsGoal + " steps");
 });
 
@@ -116,3 +119,39 @@ $('#save-steps').on("click", function(event) {
 //JavaScript for Journal
 var todaysDate = dayjs().format("dddd, DD MMMM YYYY");
 $("#todays-date").text(todaysDate);
+
+
+//Score calcs - inputs from HTML page: journal.html
+//variables to capture from journal input apply parseInt(x,10)
+var sleepInput = ""; //Input for daily sleep amount (minutes)
+var caloriesInput = parseInt(total_calories,10); //Input for daily calories (cal) intake taken from API calcs
+var stepsInput = ""; //Input for daily steps (steps)
+
+// sleepGoal in minutes
+// caloriesGoal in calories
+// stepsGoal in steps
+
+var sleepScore = sleepInput/sleepGoal * 100; //sleep score in %
+var caloriesScore = caloriesInput/caloriesGoal * 100; //nutrition score in %
+var stepsScore = stepsInput/stepsGoal * 100; //steps goals in %
+
+//Sleep score calculation in % sleeping too little or too much is bad
+if(sleepInput <= sleepGoal) {
+    sleepScore = ((sleepInput/sleepGoal, 10) * 100).toFixed(0);
+} else {
+    sleepScore = (100 - (((sleepInput - sleepGoal)/sleepGoal) * 100)).toFixed(0)
+};
+
+//calories score calculation in % eating too little or too much is bad
+if(caloriesInput <= caloriesGoal) {
+    caloriesScore = ((caloriesInput/caloriesGoal, 10) * 100).toFixed(0);
+} else {
+    caloriesScore = (100 - (((caloriesInput - caloriesGoal)/caloriesGoal) * 100)).toFixed(0)
+};
+
+//steps score calculation in % eating too much is good!
+if(stepsInput <= stepsGoal) {
+    stepsScore = ((stepsInput/stepsGoal, 10) * 100).toFixed(0);
+} else {
+    stepsScore = 100;
+};
