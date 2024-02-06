@@ -7,10 +7,44 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="./Assets/style.css">
+
     <title>Avo Great Day! | Track Your Health Goals</title>
 </head>
 
+
+
 <body>
+
+     <!--Nav bar -->
+
+     <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"> Avo Great Day! </a>
+          <button
+            class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav  ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="journal.html">Journal</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="track.html">Track your progess</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="goals.html">Set your Goals</a></li> 
+            </ul>
+          </div>
+        </div>
+      </nav>
+  
+    <!--End of Navbar-->  
+  
+
+
     <!--Title jumbotron-->
     <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
         <div class="col-md-8 p-lg-8 mx-auto my-5">
@@ -58,7 +92,7 @@
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Sleep <span><i class="fa-solid fa-face-sleeping fa-beat"></i></span></h5>
+                                <h5 class="modal-title" id="exampleModalLongTitle">Sleep<span class="fa-solid fa-face-sleeping fa-beat"></span></h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -88,7 +122,7 @@
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Nutrition <span><i class="fa-solid fa-pot-food fa-flip"></i></span></h5>
+                                <h5 class="modal-title" id="exampleModalLongTitle">Nutrition<i class="fa-solid fa-pot-food fa-flip"></i></h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -120,7 +154,7 @@
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Steps <span><i class="fa-solid fa-shoe-prints fa-bounce"></i></span></h5>
+                                <h5 class="modal-title" id="exampleModalLongTitle">Steps<i class="fad fa-shoe-prints fa-sm"></i></h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -165,7 +199,7 @@
         </div>
     </div>
 
-    <p><a href="journal.html">Records</a></p>
+
     <!-- Day.js -->
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <!-- Bootstraps -->

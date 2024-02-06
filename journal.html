@@ -11,12 +11,40 @@
     <script src="https://cdn.anychart.com/releases/8.11.1/js/anychart-core.min.js"></script>
     <script src="https://cdn.anychart.com/releases/8.11.1/js/anychart-pie.min.js"></script>
     <link rel="stylesheet" href="./Assets/style.css">
-    <!-- <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css"> -->
+
     
     <title>Avo Great Day! | Track Your Health Goals</title>
 </head>
 
 <body>
+
+
+    <!--Nav bar -->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"> Avo Great Day! </a>
+          <button
+            class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav  ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"> Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="track.html">Track your progess</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="goals.html">Set your Goals</a></li> 
+            </ul>
+          </div>
+        </div>
+      </nav>
+  
+    <!--End of Navbar-->  
     <!--Title element (current day)-->
     <div class="position-relative overflow-hidden text-center bg-body-tertiary">
         <div class="col-md-6 mx-auto my-5">
@@ -43,6 +71,7 @@
             </div>
     </div>
 
+
     <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
         <div class="my-3 py-3">
             <h2 class="display-5">Your daily Calories</h2>
@@ -50,6 +79,7 @@
             <p class="lead" id="show-calories"></p>
         </div>
     </div>
+
 
     
     <button id="submit-input-btn">Score</button>
