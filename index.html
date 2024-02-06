@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="./Assets/style.css">
@@ -12,51 +13,40 @@
 </head>
 
 
-
 <body>
-
-     <!--Nav bar -->
-
-     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"> Avo Great Day! </a>
-          <button
-            class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav  ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="journal.html">Journal</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="track.html">Track your progess</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="goals.html">Set your Goals</a></li> 
-            </ul>
-          </div>
-        </div>
-      </nav>
-  
+    <!--Nav bar -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"> Avo Great Day! </a>
+            <button
+                class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav  ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="journal.html">Journal</a>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
     <!--End of Navbar-->  
-  
+
 
 
     <!--Title jumbotron-->
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
+    <div class="position-relative overflow-hidden text-center jumbotron">
         <div class="col-md-8 p-lg-8 mx-auto my-5">
-            <img class="img-thumbnail" id="AGDLogo" src="./Assets/AvoGD-logo.jpg" alt="Avo-Great-Day Logo">
-            <h1 class="display-3 fw-bold">Avo Great Day!</h1>
-            <h4 class="fw-normal text-muted mb-3">Track your health goals today.</h3>
+            <img class="img-thumbnail" id="AGDLogo" src="./Assets/images/AvoGD-logo.jpg" alt="Avo-Great-Day Logo">
+            <h3 class="fw-normal mt-4 pb-2 subtitle">Track your health goals.</h3>
         </div>
         <div class="row justify-content-center">
             <div class="col-md-8 text-center">
                 <!-- Button trigger for the modal -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#reg-modal1">
-                    Get Started!
+                <button type="button" class="btn btn-outline-dark set-goals mb-5" data-toggle="modal" data-target="#reg-modal1">
+                    Set Your Goals!
                 </button>
 
                 <!-- Modal page 1 -->
@@ -64,24 +54,24 @@
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Get Started!</h5>
+                                <h5 class="modal-title" id="exampleModalLongTitle">Welcome to Avo Great Day!</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body" id="modal-page-1">
-                                <p>Input your name</p>
+                                <p>Please enter your name</p>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                      <span class="input-group-text" id="basic-addon1">Name</span>
+                                        <span class="input-group-text" id="basic-addon1">Name</span>
                                     </div>
                                     <input type="text" id="username" class="form-control" placeholder="Your name" aria-label="Username" aria-describedby="basic-addon1" autocomplete="username">
-                                  </div>
+                                </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                 <div>1 of 4</div>
-                                <button type="button" id="save-name" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#reg-modal2">Set your Goals!</button>
+                                <button type="button" id="save-name" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#reg-modal2">Next</button>
                             </div>
                         </div>
                     </div>
@@ -105,7 +95,6 @@
                                     <input type="number" id="sleep-goal-minute" aria-label="sleep-minute-goal" class="form-control" placeholder="Input minutes">
                                     <span class="input-group-text">minutes</span>
                                 </div>
-                                  
                             </div>
                             <div><a href="https://thesleepcharity.org.uk/information-support/adults/sleep-calculator/" target="_blank">Sleep Calculator</a></div>
                             <div class="modal-footer">
@@ -132,10 +121,9 @@
                                 <div class="input-group mb-3">
                                     <input type="number" id="calories-goal" class="form-control" placeholder="Calories intake" aria-label="Calories-goal" aria-describedby="calories-goal">
                                     <div class="input-group-append">
-                                      <span class="input-group-text" id="calories-goal">Calories</span>
+                                        <span class="input-group-text" id="calories-goal">Calories</span>
                                     </div>
-                                  </div>
-                                  
+                            </div>
                             </div>
                             <div>
                                 <a href="https://www.calculator.net/calorie-calculator.html" target="_blank">Calorie Calculator</a>
@@ -164,10 +152,9 @@
                                 <div class="input-group mb-3">
                                     <input type="number" id="steps-goal" class="form-control" placeholder="Daily steps" aria-label="steps-goal" aria-describedby="steps-goal">
                                     <div class="input-group-append">
-                                      <span class="input-group-text" id="steps-goal">steps</span>
+                                        <span class="input-group-text" id="steps-goal">steps</span>
                                     </div>
-                                  </div>
-                                  
+                                </div>
                             </div>
                             <div>
                                 <a href="https://www.hollandandbarrett.com/the-health-hub/weight-management/fitness/exercise/your-recommended-daily-steps-by-age/" target="_blank">Step Calculator</a>
@@ -185,18 +172,22 @@
         </div>
     </div>
     
-    <!-- Calendar div hidden for modal, unhide after modal-->
+    <!-- About and log your progress div-->
     <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
         <div class="my-3 py-3">
-            <h2 class="display-5">Calendar</h2>
-            <p class="lead">Pick a day to journal and log your numbers.</p>
+            <h2 class="display-5">Log Your Progress</h2>
+            <p class="lead">Begin your journey towards achieving your health goals in 3 easy steps.</p>
+            <ol>
+                <li>Click the "Set Your Goals" button above to input your goals</li>
+                <li>Keep note of how much sleep you are getting, the food you eat throughout the day and your daily step count</li>
+                <li>Log your progress here every day, enter now below</li>
+            </ol>
+
+            <a href="./journal.html">
+                <button class="btn btn-outline-dark" type="enter-btn">Enter Now!</button>
+            </a>
         </div>
-        <div class="bg-body shadow-sm mx-auto d-flex justify-content-center" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-            <div id="calendar-box"></div>
-        </div>
-        <div class=" bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden" id="calender-key">
-            <h3 class="display-6">key</h3>
-        </div>
+        
     </div>
 
 
