@@ -45,14 +45,14 @@ $('#calories-btn').on("click", function() {
         return caloriesInput;
 });
 
-$('#submit-input-btn').on("click", function() {    //Use this tag
+$('#submit-input-btn').on("click", function() {
 
     //Sleep input
     var sleepInput = parseInt(($('#sleep-input-hour').val()*60), 10) + parseInt($('#sleep-input-minute').val(), 10);  //Use this tag
     //var caloriesInput = JSON.parse(localStorage.getItem('calories'));
     
     //Steps input
-    var stepsInput = parseInt($('#steps-input').val(), 10);   //Use this tag
+    var stepsInput = parseInt($('#steps-input').val(), 10);   
 
     //Fetch the goals from localstorage
     var fetchedSleepGoal = JSON.parse(localStorage.getItem('sleepGoal'));
@@ -95,7 +95,7 @@ $('#submit-input-btn').on("click", function() {    //Use this tag
 
     console.log(averageScore);
     //Method 1 - doughnut chart code
-    anychart.onDocumentReady(function() {
+    anychart.onDocumentReady(function () {  
         //Chart data
         scoreData = [
             ["sleep-container","sleep",sleepScore],
@@ -123,9 +123,7 @@ $('#submit-input-btn').on("click", function() {    //Use this tag
             chart.container(containerName);
             chart.draw();
             }
-        };
+        }
     })
-    
-    
 });
 
