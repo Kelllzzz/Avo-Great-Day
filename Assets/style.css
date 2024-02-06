@@ -18,7 +18,11 @@
     color: #FCFDD1
 }
 
-.get-started {
-    border-radius: 60%;
-    padding: 20px;
+.set-goals {
+    background-color: white;
 }
+
+ol {
+    margin-bottom: 5%;
+}
+
