@@ -1,8 +1,24 @@
+.jumbotron {
+    background-color: #41C6B1;
+}
+
 .modal-footer {
     justify-content:space-between !important;
 }
 
 #AGDLogo {
-    width: 50%;
+    width: 40%;
     height: auto;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.subtitle {
+    color: #FCFDD1
+}
+
+.get-started {
+    border-radius: 60%;
+    padding: 20px;
 }

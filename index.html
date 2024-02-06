@@ -15,47 +15,44 @@
 
 <body>
 
-     <!--Nav bar -->
+    <!--Nav bar -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"> Avo Great Day! </a>
+            <button
+                class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav  ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="journal.html">Journal</a>
+                </li>
 
-     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"> Avo Great Day! </a>
-          <button
-            class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav  ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="journal.html">Journal</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="track.html">Track your progess</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="goals.html">Set your Goals</a></li> 
-            </ul>
-          </div>
-        </div>
-      </nav>
-  
+                <li class="nav-item">
+                    <a class="nav-link" href="track.html">Track your progess</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="goals.html">Set your Goals</a></li> 
+                </ul>
+            </div>
+            </div>
+        </nav>
     <!--End of Navbar-->  
-  
+
 
 
     <!--Title jumbotron-->
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
+    <div class="position-relative overflow-hidden p-2 p-md-5 m-md-3 text-center jumbotron">
         <div class="col-md-8 p-lg-8 mx-auto my-5">
             <img class="img-thumbnail" id="AGDLogo" src="./Assets/AvoGD-logo.jpg" alt="Avo-Great-Day Logo">
-            <h1 class="display-3 fw-bold">Avo Great Day!</h1>
-            <h4 class="fw-normal text-muted mb-3">Track your health goals today.</h3>
+            <h3 class="fw-normal mt-4 pb-2 subtitle">Track your health goals.</h3>
         </div>
         <div class="row justify-content-center">
             <div class="col-md-8 text-center">
                 <!-- Button trigger for the modal -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#reg-modal1">
+                <button type="button" class="btn btn-light get-started" data-toggle="modal" data-target="#reg-modal1">
                     Get Started!
                 </button>
 
@@ -73,10 +70,10 @@
                                 <p>Input your name</p>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                      <span class="input-group-text" id="basic-addon1">Name</span>
+                                        <span class="input-group-text" id="basic-addon1">Name</span>
                                     </div>
                                     <input type="text" id="username" class="form-control" placeholder="Your name" aria-label="Username" aria-describedby="basic-addon1" autocomplete="username">
-                                  </div>
+                                </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
