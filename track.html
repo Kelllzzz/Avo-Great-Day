@@ -8,43 +8,81 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="./Assets/style.css">
-    
+
     <title>Avo Great Day! | Track Your Health Goals</title>
 </head>
 
 <body>
-
-
     <!--Nav bar -->
-
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"> Avo Great Day! </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="index.html"> Avo Great Day! </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav  ms-auto">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html"> Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="journal.html">Journal</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="goals.html">Set your Goal</a>
-                    </li>
-
                 </ul>
             </div>
         </div>
     </nav>
-
     <!--End of Navbar-->
 
-
-
-    <div class="title" id="title">
-        <h1>Track Your Progress</h1>
+    <!--Title jumbotron-->
+    <div class="position-relative overflow-hidden text-center jumbotron">
+        <div class="col-md-8 p-lg-8 mx-auto my-5">
+            <h1 class="display-3 fw-bold">Track Your Progress</h1>
+        </div>
     </div>
+
+    <!--Progress graphs divs-->
+    <div class="row row-cols-md-1 g-4 ms-2 me-2 my-5" id="ring-data" style="height: 50%">
+        <div class="col">
+            <div class="card">
+                <div class="card-body text-center" id="overall-sleep-container">
+                    <h2 class="display-5">Sleep Progress</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body text-center" id="overall-nutrition-container">
+                    <h2 class="display-5">Nutrition Progress</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body text-center" id="overall-steps-container">
+                    <h2 class="display-5">Steps Progress</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body text-center" id="overall-score-container">
+                    <h2 class="display-5">Your Overall Score</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Day.js -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./Assets/script.js"></script>
+</body>
+
+<!--footer-->
+<footer class="py-5 text-center text-body-secondary bg-body-tertiary">
+        <p>© Avo Great Day Ltd 🥑</p>
+</footer>
+
+</html>
