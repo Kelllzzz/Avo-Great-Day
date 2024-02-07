@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <script src="https://cdn.anychart.com/releases/8.11.1/js/anychart-core.min.js"></script>
   <script src="https://cdn.anychart.com/releases/8.11.1/js/anychart-pie.min.js"></script>
@@ -48,8 +48,8 @@
 
     
   <!--Journal div-->
-  <div class="row d-flex justify-content-center mt-5 bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-    <div class="col-lg-10 bg-body-tertiary text-center overflow-hidden">
+  <div class="row d-flex justify-content-center mt-5 bg-body-transparent me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden body-bg">
+    <div class="col-lg-10 text-center overflow-hidden">
       <h4 class="display-5">Journal</h4>
       <form type="text" >
         <textarea rows="4" cols="50" placeholder="Write about anything you want" id="journal"></textarea>
@@ -57,60 +57,66 @@
     </div>
   </div>
 
-  <!--Users daily logs div-->
-  <div class="row d-flex justify-content-center mt-5 bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-    <div class="col-lg-10 bg-body-tertiary text-center overflow-hidden">
-      <h4 class="display-5">Log Today's Figures</h4>
-        <input class="user-log-sleep" id="sleep-input-hour" placeholder="hour"/>
-        <input class="user-log-sleep" id="sleep-input-minute" placeholder="minutes"/> 
+  <!--Sleep log div-->
+  <div class="row d-flex justify-content-center mt-5 bg-body-transparent me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden body-bg">
+    <div class="col-lg-10 text-center overflow-hidden">
+      <h4 class="display-5">Enter Your Sleep</h4>
+        <input class="user-log-sleep" id="sleep-input-hour" placeholder="Hours"/>
+        <input class="user-log-sleep" id="sleep-input-minute" placeholder="Minutes"/> 
         <br />
-        <input class="user-log" id="steps-input" placeholder="steps"/>
     </div>
   </div>
 
+    <!--Nutrition logs div-->
+    <div class="row d-flex justify-content-center mt-5 bg-body-transparent me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden body-bg">
+      <div class="col-lg-10 text-center overflow-hidden">
+        <h4 class="display-5">Enter Your Steps</h4>
+          <input class="user-log" id="steps-input" placeholder="Steps"/>
+      </div>
+    </div>
+
+
   <!--Your Daily Calories div-->
-  <div class="row d-flex justify-content-center mt-5 bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-    <div class="col-lg-10 bg-body-tertiary text-center overflow-hidden calorie-log">
-      <h4 class="display-5">Your Daily Calories</h4>
+  <div class="row d-flex justify-content-center mt-5 bg-body-transparent me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden body-bg calories">
+    <div class="col-lg-10 text-center overflow-hidden calorie-log">
+      <h4 class="display-5">Nutrition</h4>
         <input class="user-log-nutrition" id="nutrition-input" placeholder="Enter what you ate today"/>
         <br />
           <div class="calculated-calories">
             </div>
-        <button id="calories-btn">Calculate</button>
-        <p id="wrong-entry1" class="hide"></p>
+        <button class="btn btn-outline-dark set-goals" id="calories-btn">Calculate</button>
         <p class="lead" id="show-calories"></p>
-      </div>
+        <br />
+        <br />
+        <button class="btn btn-outline-dark set-goals" id="submit-input-btn">Click Here to Calculate Your Scores!</button>
+    </div>
   </div>
 
-  <button id="submit-input-btn">Score</button>
-  <div id="wrong-entry2" class="hide"></div>
-
   <!--TRIAL CARDS FOR RINGS-->
-  <section class="container row" id="score-container">
-    <div class="col">
-            <div class="card">
-                <div class="card-body" id="sleep-container">
-                </div>
-            </div>
+  <section class="card-group ms-3 me-3 mt-5 mb-5" id="score-container">
+    <div class="col ms-2 me-2">
+      <div class="card">
+        <div class="card-body" id="sleep-container">
         </div>
-        <div class="col">
-            <div class="card">
-                <div class="card-body" id="Nutrition-container">
-                </div>
-            </div>
+      </div>
+    </div>
+    <div class="col ms-2 me-2">
+      <div class="card">
+        <div class="card-body" id="Nutrition-container">
         </div>
-        <div class="col">
-            <div class="card">
-                <div class="card-body" id="Steps-container">
-                </div>
-            </div>
+      </div>
+    </div>
+    <div class="col ms-2 me-2">
+      <div class="card">
+        <div class="card-body" id="Steps-container">
         </div>
-        <div class="col">
-            <div class="card">
-                <div class="card-body" id="Average-score-container">
-                </div>
-            </div>
-        </div>
+      </div>
+    </div>
+    <div class="col ms-2 me-2">
+      <div class="card">
+          <div class="card-body" id="Average-score-container">
+          </div>
+      </div>
     </div>
   </section>
 
