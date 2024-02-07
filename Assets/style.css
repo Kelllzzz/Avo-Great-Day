@@ -6,6 +6,7 @@
 
 .jumbotron {
     background-color: #41C6B1;
+    height: 60%;
 }
 
 #AGDLogo {
@@ -27,6 +28,7 @@
 ol {
     text-align: center;
     margin-bottom: 5%;
+    list-style-type: none;
     padding-left: 0;
 }
 
@@ -91,6 +93,61 @@ ol li {
     margin-bottom: 2%;
 }
 
+
+/* JOURNAL PAGE*/
+
+#calendar-image {
+    width: 25%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    border: none;
+
+}
+
+.titles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #41C6B1;
+    padding: 0;
+}
+
+h1 {
+    color: white;
+}
+
+#journal {
+    width: 50%;
+    height: 100%;
+    padding: 0.5%;
+    margin-bottom: 10%;
+
+}
+
+.user-log-sleep {
+    width: 24.8%;
+    padding: 0.5%;
+    margin-bottom: 1%;
+}
+
+.user-log {
+    width: 50%;
+    padding: 0.5%;
+    margin-bottom: 1%;
+}
+
+.calorie-log {
+    padding-bottom: 15%;
+}
+
+#nutrition-input {
+    width: 50%;
+    height: 100%;
+    padding: 0.5%;
+    margin-bottom: 2%;
+}
+
 #score-container div {
     width: 100%;
     height: 100%;
@@ -108,6 +165,25 @@ ol li {
 
 
 /*TRACK YOUR PROGRESS PAGE*/
+#clock-image {
+    width: 25%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    border: none;
+
+}
+
 #ring-data {
     height: 50%;
+
+
+/*Error Message*/
+.start {
+    text-align: center;
+    color: red;
 }
+
+.hide {
+    display:none;
+  }
