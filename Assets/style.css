@@ -6,6 +6,7 @@
 
 .jumbotron {
     background-color: #41C6B1;
+    height: 60%;
 }
 
 #AGDLogo {
@@ -82,18 +83,24 @@ ol {
 /* JOURNAL PAGE*/
 
 #calendar-image {
+    width: 25%;
+    height: auto;
     padding: 0;
+    margin: 0;
     border: none;
-    height: 25%;
+
 }
 
-.journal-title {
+.titles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #41C6B1;
+    padding: 0;
 }
 
-.todays-date {
+h1 {
     color: white;
-    margin: 15%;
 }
 
 #journal {
@@ -144,6 +151,15 @@ ol {
 
 
 /*TRACK YOUR PROGRESS PAGE*/
+#clock-image {
+    width: 25%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    border: none;
+
+}
+
 #ring-data {
     height: 50%;
 
