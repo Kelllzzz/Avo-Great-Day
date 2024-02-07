@@ -32,6 +32,7 @@ $("#todays-date").text(todaysDate); //Use this tag
 var sleepInput = ""; //Input for daily sleep amount (minutes)
 var caloriesInput = 0; //Input for daily calories (cal) intake taken from API calcs
 var stepsInput = ""; //Input for daily steps (steps)
+var journalInput = ""; //Input for daily journal
 
 //Event listener when inputs are submitted
 $('#calories-btn').on("click", function() { 
@@ -80,18 +81,19 @@ $('#submit-input-btn').on("click", function() {
 
     //Sleep input
     var sleepInput = parseInt(($('#sleep-input-hour').val()*60), 10) + parseInt($('#sleep-input-minute').val(), 10);  //Use this tag
-    //var caloriesInput = JSON.parse(localStorage.getItem('calories'));
     
     //Steps input
     var stepsInput = parseInt($('#steps-input').val(), 10);   
 
-    //If statment if entries are not done correctly
-    if(isNaN(sleepInput) || caloriesInput === 0 || isNaN(stepsInput)) {
-        showErrorMessage('#wrong-entry2',wrongEntry2);
-    } else {
-        //Run the function
-        RunAndShow(sleepInput,caloriesInput,stepsInput)
-    }
+    //Journal input
+    var journalInput = $('#journal').val();
+
+    //Run the function
+    console.log(sleepInput);
+    console.log(caloriesInput);
+    console.log(stepsInput);
+    console.log(journalInput);
+    RunAndShow(sleepInput,caloriesInput,stepsInput)
 });
 
 
@@ -135,14 +137,23 @@ function RunAndShow(sleepInput,caloriesInput,stepsInput){
             stepsScore = 100;
         };
 
+
+
         //Average score
         var averageScore = parseInt(((sleepScore + caloriesScore + stepsScore)/3).toFixed(0),10);
+
+        //Save dataset to local Storage
+        var finalStoredData = [sleepScore,caloriesScore,stepsScore,journalInput];
+        console.log(finalStoredData);
+        localStorage.setItem(JSON.stringify(todaysDate),JSON.stringify(finalStoredData));
+
+        //Log to console
         console.log("sleep score: " + sleepScore);
         console.log("calories score: " + caloriesScore);
         console.log("step score: " + stepsScore);
+        console.log("step score: " + averageScore);
 
-        console.log(averageScore);
-        //Method 1 - doughnut chart code
+        //Doughnut chart code
         anychart.onDocumentReady(function () {  
             //Chart data
             scoreData = [
@@ -150,9 +161,8 @@ function RunAndShow(sleepInput,caloriesInput,stepsInput){
                 ["Nutrition-container","Nutrition",caloriesScore],
                 ["Steps-container","Steps",stepsScore],
                 ["Average-score-container","Average score",averageScore]
-            ]; 
-            //Save dataset to local Storage
-            localStorage.setItem(JSON.stringify(todaysDate),JSON.stringify(scoreData));
+            ];
+
             
             //Loop to make the charts
             for(let j = 0; j < scoreData.length; j++) {
