@@ -4,7 +4,7 @@ Avo-Great_Day is an application that helps users track their activity and nutrit
 
 ## Features
 
-- Track activity data: Users can input their daily activities, such as exercise, steps taken, and active minutes.
+- Track activity data: Users can input their daily activities, such as exercise, steps taken, sleep time and active minutes.
 - Track nutrition data: Users can input their daily food intake, including calories consumed, macronutrients, and micronutrients.
 - Calculate progress: The application uses APIs to calculate and score the user's progress based on their activity and nutrition data.
 - Set goals: Users can set goals for their daily calorie consumption or intake and track their progress towards those goals.
