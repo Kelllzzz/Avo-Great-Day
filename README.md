@@ -27,9 +27,9 @@ Avo-Great_Day is an application that helps users track their activity and nutrit
 
 Avo-Great_Day integrates with the following APIs to calculate and score progress:
 
-- [API 1]: Provides calorie consumption data based on activity data.
-- [API 2]: Provides recommended daily calorie intake based on user information.
-- [API 3]: Provides nutrient data for different food items.
+- ADAMAM API: Provides daily calorie consumption (in Calories) based on the description of food intake.
+- Inspirational Quotes API: Provides the motivational quote for the day and the author's name.
+- Giphy API: Provides a gif based on the motivational quote for the day.
 
 To integrate the APIs, you will need to obtain API keys and configure them in the `script.js` file.
 
