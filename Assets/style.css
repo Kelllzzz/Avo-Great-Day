@@ -78,6 +78,55 @@ ol {
     margin-bottom: 2%;
 }
 
+
+/* JOURNAL PAGE*/
+
+#calendar-image {
+    padding: 0;
+    border: none;
+    height: 25%;
+}
+
+.journal-title {
+    background-color: #41C6B1;
+}
+
+.todays-date {
+    color: white;
+    margin: 15%;
+}
+
+#journal {
+    width: 50%;
+    height: 100%;
+    padding: 0.5%;
+    margin-bottom: 10%;
+
+}
+
+.user-log-sleep {
+    width: 24.8%;
+    padding: 0.5%;
+    margin-bottom: 1%;
+}
+
+.user-log {
+    width: 50%;
+    padding: 0.5%;
+    margin-bottom: 1%;
+}
+
+.calorie-log {
+    padding-bottom: 15%;
+}
+
+#nutrition-input {
+    width: 50%;
+    height: 100%;
+    padding: 0.5%;
+    margin-bottom: 2%;
+}
+
 #score-container div{
     width: 100%;
     height: 100%;
@@ -97,6 +146,7 @@ ol {
 /*TRACK YOUR PROGRESS PAGE*/
 #ring-data {
     height: 50%;
+<<<<<<< HEAD
 }
 
 /*Error Message*/
@@ -107,4 +157,6 @@ ol {
 
 .hide {
     display:none;
+=======
+>>>>>>> 8018de61c2d3b850b5d7a785faad44af97fe3bf3
 }
