@@ -162,6 +162,7 @@ function RunAndShow(sleepInput,caloriesInput,stepsInput){
                 ["Steps-container","Steps",stepsScore],
                 ["Average-score-container","Average score",averageScore]
             ];
+
             
             //Loop to make the charts
             for(let j = 0; j < scoreData.length; j++) {

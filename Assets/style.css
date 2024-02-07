@@ -1,11 +1,12 @@
 /* HOME PAGE*/
 
 .modal-footer {
-    justify-content:space-between !important;
+    justify-content: space-between !important;
 }
 
 .jumbotron {
     background-color: #41C6B1;
+    height: 60%;
 }
 
 #AGDLogo {
@@ -25,8 +26,22 @@
 }
 
 ol {
+    text-align: center;
     margin-bottom: 5%;
     list-style-type: none;
+    padding-left: 0;
+}
+
+ol li {
+    list-style-position: inside;
+    padding-left: 1.4rem; 
+}
+
+.my-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -82,18 +97,24 @@ ol {
 /* JOURNAL PAGE*/
 
 #calendar-image {
+    width: 25%;
+    height: auto;
     padding: 0;
+    margin: 0;
     border: none;
-    height: 25%;
+
 }
 
-.journal-title {
+.titles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #41C6B1;
+    padding: 0;
 }
 
-.todays-date {
+h1 {
     color: white;
-    margin: 15%;
 }
 
 #journal {
@@ -127,7 +148,7 @@ ol {
     margin-bottom: 2%;
 }
 
-#score-container div{
+#score-container div {
     width: 100%;
     height: 100%;
     margin: 0;
@@ -135,19 +156,27 @@ ol {
 }
 
 .anychart-credits-text {
-    display:none !important;
+    display: none !important;
 }
 
 .anychart-credits-logo {
-    display:none !important;
+    display: none !important;
 }
 
 
 /*TRACK YOUR PROGRESS PAGE*/
+#clock-image {
+    width: 25%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    border: none;
+
+}
+
 #ring-data {
     height: 50%;
-<<<<<<< HEAD
-}
+
 
 /*Error Message*/
 .start {
@@ -157,6 +186,4 @@ ol {
 
 .hide {
     display:none;
-=======
->>>>>>> 8018de61c2d3b850b5d7a785faad44af97fe3bf3
-}
+  }
