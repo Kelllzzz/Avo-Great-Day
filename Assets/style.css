@@ -31,6 +31,12 @@ ol {
 
 /* JOURNAL PAGE*/
 
+#calendar-image {
+    padding: 0;
+    border: none;
+    height: 25%;
+}
+
 .journal-title {
     background-color: #41C6B1;
 }
