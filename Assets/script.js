@@ -1,4 +1,3 @@
-//API fetches:
 //Daily Motivational Quote API fetch
 var QuoteUrl = 'https://quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com/quote?token=ipworld.info';
 
@@ -13,6 +12,44 @@ var userName = "";
 var sleepGoal = null;
 var caloriesGoal = null;
 var stepsGoal = null;
+
+
+fetch(QuoteUrl, {
+  method: 'GET',
+  headers: {
+    'X-RapidAPI-Key': '6c2681c562msh9973791c7ac2a05p14b0b6jsn4b5033f34072',
+    'X-RapidAPI-Host': 'quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com'
+  }
+})
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data2) {
+        //Return Quote
+        console.log(data2);
+        QuoteText = data2.text;
+        var QuoteAuthor = data2.author;
+        console.log("Quote: " + QuoteText);
+        console.log("Author: " + QuoteAuthor);
+        //Insert text to HTML
+        $('#quote-today').text(QuoteText);   //Quote
+        $('#author-today').text(QuoteAuthor);   //Author
+
+        //Fetch from Giphy the best gif based on today's quote using endPoint and API 
+        var GiphyQueryUrl = "https://api.giphy.com/v1/gifs/translate?&api_key=JlYM2XmAwmrUDSWWhLTzqgSsAOwV5YZ7&s=God always takes the simplest way.";
+        var GiphyQueryUrl = "https://api.giphy.com/v1/gifs/translate?&api_key=JlYM2XmAwmrUDSWWhLTzqgSsAOwV5YZ7&s=" + QuoteText;
+        fetch(GiphyQueryUrl)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data3) {
+                console.log(data3);
+                var GifUrl = data3.data.images.original.url;
+                console.log(GifUrl);
+                //Insert text to HTML
+                $('#gif-image').attr('src', GifUrl);   //Gif
+            })
+    });
 
 //Modal page
 //Page 1 - Capture username input in variables
@@ -51,11 +88,6 @@ $('#save-steps').on("click", function(event) {
     console.log("Steps Goal: " + stepsGoal + " steps");
 });
 
-// Next for the homepage, make calendar
-// id of container is "calendar-box"
-//jQuery UI for datepicker and dynamically insert calendar in index.html
-$(function() {
-    $("#calendar-box").datepicker();
-  } );
-
-//Calendar functionality
+//Today's date
+var todaysDate = dayjs().format("dddd, DD MMMM YYYY");
+$("#todays-date").text("Today is " + todaysDate); //Use this tag
