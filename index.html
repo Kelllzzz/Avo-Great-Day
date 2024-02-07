@@ -18,7 +18,7 @@
     <!--Nav bar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"> Avo Great Day! </a>
+            <a class="navbar-brand" href="index.html"> Avo Great Day!   🥑</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -66,7 +66,7 @@
                                 <p>Please enter your name</p>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1">🥑Name</span>
+                                        <span class="input-group-text" id="basic-addon1">Name</span>
                                     </div>
                                     <input type="text" id="username" class="form-control" placeholder="Your name"
                                         aria-label="Username" aria-describedby="basic-addon1" autocomplete="username">
@@ -98,10 +98,10 @@
                                 <p>How much sleep would you like to have daily?</p>
                                 <div class="input-group">
                                     <input type="number" id="sleep-goal-hour" aria-label="sleep-hour-goal"
-                                        class="form-control" placeholder="Input hours">
+                                        class="form-control" placeholder="Input hours" min="0" max="24">
                                     <span class="input-group-text">hours</span>
                                     <input type="number" id="sleep-goal-minute" aria-label="sleep-minute-goal"
-                                        class="form-control" placeholder="Input minutes">
+                                        class="form-control" placeholder="Input minutes" min="0" max="59">
                                     <span class="input-group-text">minutes</span>
                                 </div>
                             </div>
@@ -131,7 +131,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <p>What is your recommended daily calory intake?</p>
+                                <p>What is your recommended daily calorie intake?</p>
                                 <div class="input-group mb-3">
                                     <input type="number" id="calories-goal" class="form-control"
                                         placeholder="Calories intake" aria-label="Calories-goal"
