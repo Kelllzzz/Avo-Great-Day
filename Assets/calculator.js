@@ -61,7 +61,7 @@ $('#calories-btn').on("click", function() {
             .then(function(data1) {
                 //Capture calory count
                 console.log(data1);
-                if(data1.calories === 0) {
+                if(data1.calories !== 0) {
                     //return a try again message
                 caloriesInput = data1.calories;
                 console.log("Total calorie: " + caloriesInput + " cal");
@@ -69,8 +69,9 @@ $('#calories-btn').on("click", function() {
                 }
                 //Show in the page the equivalent calory count
                 $('#calories-result').text("Based on your input you have consumed " + caloriesInput + " calories on this day!") //Use this tag
+                console.log("Calculate" + caloriesInput);
             });
-            console.log("Calculate");
+            console.log("Calculate" + caloriesInput);
         return caloriesInput;
         } else {
             showErrorMessage('#wrong-entry1',wrongEntry1);
@@ -85,19 +86,19 @@ $('#submit-input-btn').on("click", function() {
     //Steps input
     var stepsInput = parseInt($('#steps-input').val(), 10);   
 
-    //Journal input
-    var journalInput = $('#journal').val();
+    //Journal input to be filled later
+    var journalInput = "";
 
     //Run the function
     console.log(sleepInput);
     console.log(caloriesInput);
     console.log(stepsInput);
     console.log(journalInput);
-    RunAndShow(sleepInput,caloriesInput,stepsInput)
+    RunAndShow(sleepInput,caloriesInput,stepsInput,journalInput)
 });
 
 
-function RunAndShow(sleepInput,caloriesInput,stepsInput){
+function RunAndShow(sleepInput,caloriesInput,stepsInput,journalInput){
         //Fetch the goals from localstorage
         var fetchedSleepGoal = JSON.parse(localStorage.getItem('sleepGoal'));
         var fetchedCaloriesGoal = JSON.parse(localStorage.getItem('caloriesGoal'));
@@ -137,7 +138,7 @@ function RunAndShow(sleepInput,caloriesInput,stepsInput){
             stepsScore = 100;
         };
 
-
+        journalInput = $('#journal').val();
 
         //Average score
         var averageScore = parseInt(((sleepScore + caloriesScore + stepsScore)/3).toFixed(0),10);
