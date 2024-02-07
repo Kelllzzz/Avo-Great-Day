@@ -1,3 +1,8 @@
+// Fetch each day from local storage and chuck them 
+//Today's date
+var todaysDate = dayjs().format("dddd, DD MMMM YYYY");
+$("#todays-date").text(todaysDate); //Use this tag
+
 scoreData = [
     ["sleep-container","sleep",sleepScore],
     ["Nutrition-container","Nutrition",caloriesScore],
