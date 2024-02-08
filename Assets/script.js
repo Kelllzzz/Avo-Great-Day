@@ -7,52 +7,77 @@ var GiphyAPI_Key = "JlYM2XmAwmrUDSWWhLTzqgSsAOwV5YZ7"
 var GiphyUrl = "api.giphy.com/v1/gifs/translate"
 
 //Global scope variable
-var QuoteText = ""; 
+var QuoteText = "The world is always in movement.";
+var QuoteAuthor = "V. Naipaul";
 var userName = "";
 var sleepGoal = null;
 var caloriesGoal = null;
 var stepsGoal = null;
 
+//Insert text to HTML
+$('#quote-today').text(QuoteText);   //Quote
+$('#author-today').text(QuoteAuthor);   //Author
 
-fetch(QuoteUrl, {
-  method: 'GET',
-  headers: {
-    'X-RapidAPI-Key': '6c2681c562msh9973791c7ac2a05p14b0b6jsn4b5033f34072',
-    'X-RapidAPI-Host': 'quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com'
-  }
-})
+//Normally, use this fetch, but for presentation, use the quote of the day directly to avoid maxing out on calls.
+// fetch(QuoteUrl, {
+//   method: 'GET',
+//   headers: {
+//     // 'X-RapidAPI-Key': '6c2681c562msh9973791c7ac2a05p14b0b6jsn4b5033f34072',
+//     'X-RapidAPI-Key':'6d6efec0c9mshe4788166ac6fa7ap137c45jsnd8f32bd452f7', //Second API key
+//     'X-RapidAPI-Host': 'quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com'
+//   }
+// })
+//     .then(function(response) {
+//         return response.json();
+//     })
+//     .then(function(data2) {
+//         //Return Quote
+//         console.log(data2);
+//         QuoteText = data2.text;
+//         var QuoteAuthor = data2.author;
+//         console.log("Quote: " + QuoteText);
+//         console.log("Author: " + QuoteAuthor);
+//         //Insert text to HTML
+//         $('#quote-today').text(QuoteText);   //Quote
+//         $('#author-today').text(QuoteAuthor);   //Author
+
+
+//         //Fetch from Giphy the best gif based on today's quote using endPoint and API 
+//         var GiphyQueryUrl = "https://api.giphy.com/v1/gifs/translate?&api_key=JlYM2XmAwmrUDSWWhLTzqgSsAOwV5YZ7&s=" + QuoteText;
+//         fetch(GiphyQueryUrl)
+//             .then(function(response) {
+//                 return response.json();
+//             })
+//             .then(function(data3) {
+//                 console.log(data3);
+//                 var GifUrl = data3.data.images.original.url;
+//                 console.log(GifUrl);
+//                 //Insert text to HTML
+//                 $('#gif-image').attr('src', GifUrl);   //Gif
+//             })
+//     })
+//         .catch(function(error) {
+//             console.error("Fetching limit reached");
+//         });
+
+//For the presentation to avoid maxing out on API calls
+
+  
+//Fetch from Giphy the best gif based on today's quote using endPoint and API 
+var GiphyQueryUrl = "https://api.giphy.com/v1/gifs/translate?&api_key=JlYM2XmAwmrUDSWWhLTzqgSsAOwV5YZ7&s=" + QuoteText;
+fetch(GiphyQueryUrl)
     .then(function(response) {
         return response.json();
     })
-    .then(function(data2) {
-        //Return Quote
-        console.log(data2);
-        QuoteText = data2.text;
-        var QuoteAuthor = data2.author;
-        console.log("Quote: " + QuoteText);
-        console.log("Author: " + QuoteAuthor);
+    .then(function(data3) {
+        console.log(data3);
+        var GifUrl = data3.data.images.original.url;
+        console.log(GifUrl);
         //Insert text to HTML
-        $('#quote-today').text(QuoteText);   //Quote
-        $('#author-today').text(QuoteAuthor);   //Author
-
-        //Fetch from Giphy the best gif based on today's quote using endPoint and API 
-        var GiphyQueryUrl = "https://api.giphy.com/v1/gifs/translate?&api_key=JlYM2XmAwmrUDSWWhLTzqgSsAOwV5YZ7&s=God always takes the simplest way.";
-        var GiphyQueryUrl = "https://api.giphy.com/v1/gifs/translate?&api_key=JlYM2XmAwmrUDSWWhLTzqgSsAOwV5YZ7&s=" + QuoteText;
-        fetch(GiphyQueryUrl)
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(data3) {
-                console.log(data3);
-                var GifUrl = data3.data.images.original.url;
-                console.log(GifUrl);
-                //Insert text to HTML
-                $('#gif-image').attr('src', GifUrl);   //Gif
-            })
+        $('#gif-image').attr('src', GifUrl);   //Gif
     })
-        .catch(function(error) {
-            console.error("Fetching limit reached");
-        });
+
+
 
 //Modal page
 //Page 1 - Capture username input in variables
