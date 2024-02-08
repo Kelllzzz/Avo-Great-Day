@@ -70,9 +70,10 @@ $('#calories-btn').on("click", function() {
                 //Show in the page the equivalent calory count
                 $('#calories-result').text("Based on your input you have consumed " + caloriesInput + " calories on this day!") //Use this tag
                 console.log("Calculate" + caloriesInput);
+                $('#calories-output').text("You have had around " + caloriesInput + " Calories today.")
             });
             console.log("Calculate" + caloriesInput);
-            $('#calories-output').text("You have had around " + caloriesInput + " Calories today.")
+            
         return caloriesInput;
         } else {
             showErrorMessage('#wrong-entry1',wrongEntry1);
@@ -80,11 +81,6 @@ $('#calories-btn').on("click", function() {
 });    
 
 $('#submit-input-btn').on("click", function() {
-   //clear the graphs if present
-    $('#sleep-container').clear();
-    $('#Nutrition-container').clear();
-    $('#Steps-container').clear();
-    $('#Average-container').clear();
 
     //Sleep input
     var sleepInput = parseInt(($('#sleep-input-hour').val()*60), 10) + parseInt($('#sleep-input-minute').val(), 10);  //Use this tag

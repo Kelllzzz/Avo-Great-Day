@@ -80,22 +80,15 @@
   <!--Your Daily Calories div-->
   <div class="row d-flex justify-content-center mt-5 bg-body-transparent me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden body-bg calories responsive-calories">
     <div class="col-lg-10 text-center overflow-hidden calorie-log">
-      <h4 class="display-5">Nutrition</h4>
+      <h4 class="display-5">Nutrition: <span id="calories-output"></span></h4>
         <input class="user-log-nutrition" id="nutrition-input" placeholder="Enter what you ate today"/>
         <br />
           <div class="calculated-calories">
             </div>
         <button class="btn btn-outline-dark set-goals btn-responsive" id="calories-btn">Calculate Your Calories</button>
-        <p class="lead" id="show-calories"></p>
-        <div class="col ms-2 me-2">
-          <div class="card">
-            <div class="card-body">
-              <p class="calories-output"></p>
-            </div>
-          </div>
-      </div>
+        <p id="wrong-entry1"></p>
         <button class="btn btn-outline-dark set-goals btn-responsive" id="submit-input-btn">Click Here to Calculate Your Scores!</button>
-    </div>
+      </div>
   </div>
 
   <!--TRIAL CARDS FOR RINGS-->
