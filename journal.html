@@ -43,7 +43,7 @@
   <div class="position-relative overflow-hidden text-center jumbotron">
     <div class="col-md-8 p-lg-8 mx-auto my-5 titles">
         <img class="calendar-image" id="calendar-image" src="./Assets/images/calendar.jpg" alt="Calendar image">
-        <h1 class="display-4 fw-bold todays-date" id="todays-date"></h1>
+        <h1 class="display-4 fw-bold todays-date text-black" id="todays-date"></h1>
     </div>
   </div>
 
@@ -63,8 +63,8 @@
   <div class="row d-flex justify-content-center mt-5 bg-body-transparent me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden body-bg">
     <div class="col-lg-10 text-center overflow-hidden">
       <h4 class="display-5">Enter Your Sleep</h4>
-        <input class="user-log-sleep" id="sleep-input-hour" placeholder="Hours"/>
-        <input class="user-log-sleep" id="sleep-input-minute" placeholder="Minutes"/> 
+        <input class="user-log-sleep" id="sleep-input-hour" type="number"  min="0" max="24" placeholder="Hours"/>
+        <input class="user-log-sleep" id="sleep-input-minute" type="number" min="0" max="59" placeholder="Minutes"/> 
         <br />
     </div>
   </div>
@@ -73,7 +73,7 @@
     <div class="row d-flex justify-content-center mt-5 bg-body-transparent me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden body-bg">
       <div class="col-lg-10 text-center overflow-hidden">
         <h4 class="display-5">Enter Your Steps</h4>
-          <input class="user-log" id="steps-input" placeholder="Steps"/>
+          <input class="user-log" id="steps-input" type="number" placeholder="Steps"/>
       </div>
     </div>
 
