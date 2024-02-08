@@ -1,6 +1,6 @@
 /* HOME PAGE*/
 .modal-footer {
-    justify-content:space-between !important;
+    justify-content: space-between !important;
 }
 
 .jumbotron {
@@ -25,14 +25,18 @@
 }
 
 ol {
+    text-align: center;
     margin-bottom: 5%;
+    list-style-type: none;
+    padding-left: 0;
+
 }
 
 ol li {
     list-style-position: inside;
-    padding-left: 1.4rem; 
-    color: blueviolet;
-    list-style-type: none;
+    padding-left: 1.4rem;
+    color: red;
+
 }
 
 .my-3 {
@@ -69,7 +73,8 @@ h1 {
     color: white;
 }
 
-#journal, #nutrition-input  {
+#journal,
+#nutrition-input {
     width: 40%;
     height: 100%;
     padding: 0.5%;
@@ -93,8 +98,7 @@ h1 {
     padding-bottom: 20%;
 }
 
-
-#score-container div{
+#score-container div {
     display: flex;
     align-items: center;
     width: 100%;
@@ -104,14 +108,18 @@ h1 {
 }
 
 .anychart-credits-text {
-    display:none !important;
+    display: none !important;
 }
 
 .anychart-credits-logo {
-    display:none !important;
+    display: none !important;
 }
 
-#journal, #sleep-input-hour, #sleep-input-minute, #steps-input, #nutrition-input {
+#journal,
+#sleep-input-hour,
+#sleep-input-minute,
+#steps-input,
+#nutrition-input {
     border: 1px solid;
     border-radius: 10px;
 }
