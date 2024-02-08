@@ -28,6 +28,20 @@ ol {
     margin-bottom: 5%;
 }
 
+ol li {
+    list-style-position: inside;
+    padding-left: 1.4rem; 
+    color: blueviolet;
+    list-style-type: none;
+}
+
+.my-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* JOURNAL PAGE*/
 body {
