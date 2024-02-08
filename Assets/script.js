@@ -17,7 +17,8 @@ var stepsGoal = null;
 fetch(QuoteUrl, {
   method: 'GET',
   headers: {
-    'X-RapidAPI-Key': '6c2681c562msh9973791c7ac2a05p14b0b6jsn4b5033f34072',
+    // 'X-RapidAPI-Key': '6c2681c562msh9973791c7ac2a05p14b0b6jsn4b5033f34072',
+    'X-RapidAPI-Key':'6d6efec0c9mshe4788166ac6fa7ap137c45jsnd8f32bd452f7', //Second API key
     'X-RapidAPI-Host': 'quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com'
   }
 })
