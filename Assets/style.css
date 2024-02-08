@@ -120,3 +120,8 @@ h1 {
 #ring-data {
     height: 50%;
 }
+
+#progress-container {
+    width: 100%;
+    height: 100vh;
+}
