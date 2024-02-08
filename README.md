@@ -16,7 +16,7 @@ N/A
 
 ## Usage
 
-1. Open `index.html` in your web browser.
+1. Open the webpage in your browser at https://kelllzzz.github.io/Avo-Great-Day/ 
 2. Use the application to input your daily activity and nutrition data.
 3. View your progress and scores on the dashboard.
 4. Adjust your goals and track your progress over time.

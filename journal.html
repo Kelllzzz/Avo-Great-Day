@@ -48,7 +48,7 @@
 
     
   <!--Journal div-->
-  <div class="row d-flex justify-content-center mt-5 bg-body-transparent me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden body-bg">
+  <div class="row d-flex justify-content-center mt-5 bg-body-transparent me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden body-bg div-responsive">
     <div class="col-lg-10 text-center overflow-hidden">
       <h4 class="display-5">Journal</h4>
       <form type="text" >
@@ -58,7 +58,7 @@
   </div>
 
   <!--Sleep log div-->
-  <div class="row d-flex justify-content-center mt-5 bg-body-transparent me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden body-bg">
+  <div class="row d-flex justify-content-center mt-5 bg-body-transparent me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden body-bg div-responsive">
     <div class="col-lg-10 text-center overflow-hidden">
       <h4 class="display-5">Enter Your Sleep</h4>
         <input class="user-log-sleep" id="sleep-input-hour" type="number"  min="0" max="24" placeholder="Hours"/>
@@ -68,57 +68,88 @@
   </div>
 
     <!--Nutrition logs div-->
-    <div class="row d-flex justify-content-center mt-5 bg-body-transparent me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden body-bg">
+    <div class="row d-flex justify-content-center mt-5 bg-body-transparent me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden body-bg div-responsive">
       <div class="col-lg-10 text-center overflow-hidden">
         <h4 class="display-5">Enter Your Steps</h4>
           <input class="user-log" id="steps-input" type="number" placeholder="Steps"/>
       </div>
     </div>
 
-
   <!--Your Daily Calories div-->
-  <div class="row d-flex justify-content-center mt-5 bg-body-transparent me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden body-bg calories">
+  <div class="row d-flex justify-content-center mt-5 bg-body-transparent me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden body-bg calories responsive-calories">
     <div class="col-lg-10 text-center overflow-hidden calorie-log">
       <h4 class="display-5">Nutrition</h4>
         <input class="user-log-nutrition" id="nutrition-input" placeholder="Enter what you ate today"/>
         <br />
           <div class="calculated-calories">
             </div>
-        <button class="btn btn-outline-dark set-goals" id="calories-btn">Calculate</button>
+        <button class="btn btn-outline-dark set-goals btn-responsive" id="calories-btn">Calculate Your Calories</button>
         <p class="lead" id="show-calories"></p>
-        <br />
-        <br />
-        <button class="btn btn-outline-dark set-goals" id="submit-input-btn">Click Here to Calculate Your Scores!</button>
+        <div class="col ms-2 me-2">
+          <div class="card">
+            <div class="card-body">
+              <p class="calories-output"></p>
+            </div>
+          </div>
+      </div>
+        <button class="btn btn-outline-dark set-goals btn-responsive" id="submit-input-btn">Click Here to Calculate Your Scores!</button>
     </div>
   </div>
 
   <!--TRIAL CARDS FOR RINGS-->
-  <section class="card-group ms-3 me-3 mt-5 mb-5" id="score-container">
+
+  <!-- <section class="card-group cols-md-2 g-4 ms-3 me-3 mt-5 mb-5" id="score-container">
+  
     <div class="col ms-2 me-2">
-      <div class="card">
         <div class="card-body" id="sleep-container">
         </div>
-      </div>
     </div>
     <div class="col ms-2 me-2">
-      <div class="card">
         <div class="card-body" id="Nutrition-container">
         </div>
-      </div>
     </div>
     <div class="col ms-2 me-2">
+        <div class="card-body" id="Steps-container">
+        </div>
+    </div>
+    <div class="col ms-2 me-2">
+          <div class="card-body" id="Average-score-container">
+          </div>
+    </div>
+  </section> -->
+
+
+  <div class="row row-cols-1 row-cols-md-2 g-4 responsive-rings" id="score-container">
+    <div class="row ms-3 me-3">
+      <div class="col">
+        <div class="card">
+          <div class="card-body" id="sleep-container">
+          </div>
+        </div>
+      </div>
+    
+      <div class="col">
+        <div class="card">
+          <div class="card-body" id="Nutrition-container">
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="row ms-3 me-3">
+    <div class="col">
       <div class="card">
         <div class="card-body" id="Steps-container">
         </div>
       </div>
     </div>
-    <div class="col ms-2 me-2">
+    <div class="col">
       <div class="card">
-          <div class="card-body" id="Average-score-container">
-          </div>
+        <div class="card-body" id="Average-score-container">
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</div>
 
 
   <!-- Day.js -->
