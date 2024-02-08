@@ -12,9 +12,7 @@ Avo-Great_Day is an application that helps users track their activity and nutrit
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/your-username/Avo-Great-Day.git`
-2. Navigate to the project directory: `cd Avo-Great-Day`
-3. Install dependencies: `npm install`
+N/A
 
 ## Usage
 
