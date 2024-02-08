@@ -49,7 +49,10 @@ fetch(QuoteUrl, {
                 //Insert text to HTML
                 $('#gif-image').attr('src', GifUrl);   //Gif
             })
-    });
+    })
+        .catch(function(error) {
+            console.error("Fetching limit reached");
+        });
 
 //Modal page
 //Page 1 - Capture username input in variables
