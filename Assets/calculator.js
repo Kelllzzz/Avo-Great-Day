@@ -70,6 +70,7 @@ $('#calories-btn').on("click", function() {
                 //Show in the page the equivalent calory count
                 $('#calories-result').text("Based on your input you have consumed " + caloriesInput + " calories on this day!") //Use this tag
                 console.log("Calculate" + caloriesInput);
+                $('#calories-output').text("You have had around " + caloriesInput + " Calories today.")
             });
             console.log("Calculate" + caloriesInput);
             $('#calories-output').text("You have had around " + caloriesInput + " Calories today.")
