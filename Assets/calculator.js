@@ -81,10 +81,10 @@ $('#calories-btn').on("click", function() {
 
 $('#submit-input-btn').on("click", function() {
    //clear the graphs if present
-    $('#sleep-container').clear();
-    $('#Nutrition-container').clear();
-    $('#Steps-container').clear();
-    $('#Average-container').clear();
+    $('#sleep-container').empty();
+    $('#Nutrition-container').empty();
+    $('#Steps-container').empty();
+    $('#Average-container').empty();
 
     //Sleep input
     var sleepInput = parseInt(($('#sleep-input-hour').val()*60), 10) + parseInt($('#sleep-input-minute').val(), 10);  //Use this tag

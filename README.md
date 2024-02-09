@@ -1,6 +1,6 @@
-# Avo-Great_Day
+# Avo-Great-Day
 
-Avo-Great_Day is an application that helps users track their activity and nutrition data to calculate and score their progress over a set period of time. It integrates with APIs to calculate and score progress in terms of calorie consumption or intake in relation to daily recommendations.
+Avo-Great-Day is an application that helps users track their activity and nutrition data to calculate and score their progress over a set period of time. It integrates with APIs to calculate and score progress in terms of calorie consumption or intake in relation to daily recommendations.
 
 ## Features
 
@@ -20,6 +20,10 @@ N/A
 2. Use the application to input your daily activity and nutrition data.
 3. View your progress and scores on the dashboard.
 4. Adjust your goals and track your progress over time.
+
+To use this website,the following images shows the web application's appearance and functionality:
+
+![Home Page](./Assets/Images/Homepage.png) ![Journal Page](./Assets/Images/Journalpage.png) ![Track Page](./Assets/Images/Trackpage.png)
 
 ## API Integration
 
@@ -41,4 +45,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Live Site Access
 
-[Clickhere](https://kelllzzz.github.io/Avo-Great-Day/)
+[Click Here](https://kelllzzz.github.io/Avo-Great-Day/)
