@@ -23,9 +23,10 @@ N/A
 
 To use this website,the following images shows the web application's appearance and functionality:
 
-![The Avo-great-Day web application includes a navigation bar, a header image](../Avo-Great-Day/Assets/Images/Homepage.png)
-![Journal Page](../Avo-Great-Day/Assets/Images/Journalpage.png) 
-![Track Page](../Avo-Great-Day/Assets/Images/Trackpage.png)
+![Homepage](https://github.com/Kelllzzz/Avo-Great-Day/assets/117757450/619192ea-1e07-4a9d-ac86-03c10c13756b)
+![Journalpage](https://github.com/Kelllzzz/Avo-Great-Day/assets/117757450/3ac2f9b4-945d-4c78-85d3-90c911700388)
+![Trackpage](https://github.com/Kelllzzz/Avo-Great-Day/assets/117757450/c671a432-d759-4650-a27d-460711d2079c)
+
 
 ## API Integration
 
