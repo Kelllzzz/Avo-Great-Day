@@ -23,9 +23,9 @@ N/A
 
 To use this website,the following images shows the web application's appearance and functionality:
 
-![The Av0-great-Day web application includes a navigation bar, a header image](./Assets/Images/Homepage.png)
-![Journal Page](./Assets/Images/Journalpage.png) 
-![Track Page](./Assets/Images/Trackpage.png)
+![The Avo-great-Day web application includes a navigation bar, a header image](../Avo-Great-Day/Assets/Images/Homepage.png)
+![Journal Page](../Avo-Great-Day/Assets/Images/Journalpage.png) 
+![Track Page](../Avo-Great-Day/Assets/Images/Trackpage.png)
 
 ## API Integration
 
