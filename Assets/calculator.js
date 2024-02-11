@@ -131,7 +131,7 @@ function RunAndShow(sleepInput,caloriesInput,stepsInput,journalInput){
         if(caloriesInput <= fetchedCaloriesGoal) {
             caloriesScore = parseInt(((caloriesInput/fetchedCaloriesGoal) * 100).toFixed(0),10);
         } else if(caloriesInput > (2 * fetchedCaloriesGoal)) {
-            sleepScore = 0;     //If input is unrealistic to avoid negative score.
+            caloriesScore = 0;     //If input is unrealistic to avoid negative score.
         } else {
             caloriesScore = parseInt((100 - (((caloriesInput - fetchedCaloriesGoal)/fetchedCaloriesGoal) * 100)).toFixed(0),10)
         };
